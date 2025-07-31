@@ -145,7 +145,6 @@ async def list_allowed_users(client, message: Message):
     await message.reply("**Allowed Users:**\n" + "\n".join(user_lines))
 
 @bot.on_message(filters.command("start") & filters.private)
-@allowed_user_only
 async def start(_, message: Message):
     welcome_text = (
         "👋 **Welcome to Media Downloader Bot!**\n\n"
@@ -164,7 +163,6 @@ async def start(_, message: Message):
 
 
 @bot.on_message(filters.command("help") & filters.private)
-@allowed_user_only
 async def help_command(_, message: Message):
     help_text = (
         "💡 **Media Downloader Bot Help**\n\n"
