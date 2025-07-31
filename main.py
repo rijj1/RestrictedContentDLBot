@@ -152,8 +152,8 @@ async def start(_, message: Message):
         "Just send me a link (paste it directly or use `/dl <link>`),\n"
         "or reply to a message with `/dl`.\n\n"
         "ℹ️ Use `/help` to view all commands and examples.\n"
-        "🔒 Make sure the user client is part of the chat.\n\n"
-        "Ready? Send me a Telegram post link!"
+        "Ready? Send me a Telegram post link!\n"
+        "NOTE: Only Allowed Users can use this Bot."
     )
 
     markup = InlineKeyboardMarkup(
