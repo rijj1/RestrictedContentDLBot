@@ -376,6 +376,7 @@ async def handle_any_message(bot: Client, message: Message):
 
 
 @bot.on_message(filters.command("stats") & filters.private)
+@allowed_user_only
 async def stats(_, message: Message):
     currentTime = get_readable_time(time() - PyroConf.BOT_START_TIME)
     total, used, free = shutil.disk_usage(".")
