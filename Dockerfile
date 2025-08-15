@@ -6,7 +6,7 @@ RUN apt-get update && apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 
 # Set timezone (use Asia/Kolkata if needed)
-ENV TZ=Asia/Dhaka
+ENV TZ=Asia/Kolkata
 
 RUN pip install --no-cache-dir -U pip wheel==0.45.1
 
@@ -17,3 +17,4 @@ RUN pip install -U -r requirements.txt
 COPY . /app
 
 CMD ["python3", "main.py"]
+
